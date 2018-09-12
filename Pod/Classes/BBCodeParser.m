@@ -150,12 +150,15 @@ static NSString *__closingTag = @"/";
     [element setStartIndex:_length];
     
     // Check if tag is valid BBCode tag.
-    NSArray *components = [tag componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	NSArray *components = [self getComponentsFrom:tag];
+	
     if (components == nil || [components count] == 0)
         @throw [NSException exceptionWithName:@"Invalid components count!" reason:@"Element tag isn't valid." userInfo:nil];
     
     // Set element's tag.
-    NSString *tagName = [components objectAtIndex:0];
+	NSString *nameComponent = [components objectAtIndex:0];
+	NSArray *splitNameComponent = [nameComponent componentsSeparatedByString:@"="];
+    NSString *tagName = [splitNameComponent objectAtIndex:0];
     [element setTag:tagName];
     
     // Set element's attributes.
