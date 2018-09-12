@@ -65,7 +65,7 @@ static NSString *__closingTag = @"/";
 
 - (NSArray *)getAttributesFromTag:(NSString *)tag
 {
-	NSArray *tagComponents = [self getComponentsFrom:tag];//[tag componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	NSArray *tagComponents = [self getComponentsFrom:tag];
 	
 	NSMutableArray *attributes = [NSMutableArray array];
 	for (NSString *component in tagComponents)
