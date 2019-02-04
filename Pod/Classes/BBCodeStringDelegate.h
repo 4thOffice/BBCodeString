@@ -18,7 +18,7 @@
 - (NSString *)getTextForElement:(BBElement *)element;
 
 /** Returns the attributed text which will be displayed for the given BBCode element. **/
-- (NSAttributedString *)getAttributedTextForElement:(BBElement *)element;
+- (NSAttributedString * _Nullable)getAttributedTextForElement:(BBElement *)element;
 
 /** Deprecated. Returns the font for the given BBCode element. **/
 - (UIFont *)getFont:(BBElement *)element;
