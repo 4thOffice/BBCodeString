@@ -1,7 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+platform :ios, '8.0'
+inhibit_all_warnings!
 
-target 'BBCodeString', :exclusive => true do
+xcodeproj 'BBCodeString'
+use_frameworks!
+
+target 'BBCodeString' do
   pod "BBCodeString", :path => "../"
 
   
