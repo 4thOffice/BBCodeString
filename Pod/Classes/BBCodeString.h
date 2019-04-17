@@ -19,6 +19,7 @@
 @property (nonatomic, weak) id<BBCodeStringDelegate> layoutProvider;
 @property (nonatomic, readonly, copy) NSString *bbCode;
 @property (nonatomic, readonly) NSMutableAttributedString *attributedString;
+@property (nonatomic, readonly) BBElement *root;
 
 - (id)initWithBBCode:(NSString *)bbCode andLayoutProvider:(id<BBCodeStringDelegate>)layoutProvider;
 
